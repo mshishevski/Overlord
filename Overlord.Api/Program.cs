@@ -7,7 +7,7 @@ namespace Overlord.Api
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
             
             builder.Logging.ClearProviders(); 
             builder.Logging.AddConsole();
@@ -20,7 +20,12 @@ namespace Overlord.Api
 
             builder.Services.AddMqttBrokerServices();
 
-            var connectionString = builder.Configuration.GetConnectionString("OverlordContext");
+            string? connectionString = builder.Configuration.GetConnectionString("OverlordContext");
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new Exception("EMPTY CONNECTION STRING!");
+            }
 
             builder.Services.AddOverlordServices(connectionString);
 

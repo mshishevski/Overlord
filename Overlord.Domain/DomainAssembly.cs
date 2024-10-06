@@ -6,5 +6,4 @@ namespace Overlord.Domain
     {
         public static Assembly Get() => typeof(DomainAssembly).Assembly;
     }
-
 }

@@ -1,8 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Overlord.Application;
 using Overlord.DataAccess;
-using MediatR;
 
 namespace Overlord.Infrastructure.DependencyInjection
 {

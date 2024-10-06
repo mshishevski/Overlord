@@ -3,8 +3,5 @@ using Overlord.Domain.SortBy;
 
 namespace Overlord.Api.Requests.Metrics
 {
-    public class GetMetricsRequest : BasePagedRequest<MetricsSortByEnum>
-    {
-        
-    }
+    public class GetMetricsRequest : BasePagedRequest<MetricsSortByEnum> { }
 }

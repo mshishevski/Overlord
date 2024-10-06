@@ -4,8 +4,7 @@
     {
         public ValidationError[] Errors { get; } = Array.Empty<ValidationError>();
 
-        private protected ValidationFailureResult(ValidationError[] errors, ErrorType errorType = ErrorType.Validation) : base(errorType,
-            "One or more validation errors occurred")
+        private protected ValidationFailureResult(ValidationError[] errors, ErrorType errorType = ErrorType.Validation) : base(errorType, "One or more validation errors occurred")
         {
             Errors = errors;
         }

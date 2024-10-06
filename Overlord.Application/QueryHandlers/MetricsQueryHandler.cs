@@ -1,16 +1,15 @@
-﻿using Overlord.Domain.Base;
-using Overlord.Domain.Results;
-using Overlord.Domain.SortBy;
-using MediatR;
+﻿using MediatR;
 using Overlord.Application.Extensions;
 using Overlord.Application.Extensions.Metrics;
+using Overlord.Domain.Base;
+using Overlord.Domain.Results;
+using Overlord.Domain.SortBy;
 
 namespace Overlord.Application.QueryHandlers
 {
     public record GetAllMetricsQuery(int PageIndex, int PageSize, bool DescendingSortDirection,
         MetricsSortByEnum SortBy) : PagedRequest<MetricsSortByEnum>(PageIndex, PageSize, DescendingSortDirection, SortBy), IRequest<QueryResult<BaseTableResult<MetricItem>>>;
     public record MetricItem(int MetricId, string Name, string Description);
-
 
     public class MetricsQueryHandler : IRequestHandler<GetAllMetricsQuery, QueryResult<BaseTableResult<MetricItem>>>
     {

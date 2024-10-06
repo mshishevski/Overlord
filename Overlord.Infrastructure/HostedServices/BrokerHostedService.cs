@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Overlord.Application.Interfaces;
 
-
 namespace Overlord.Infrastructure.HostedServices
 {
     public class BrokerHostedService : IHostedService

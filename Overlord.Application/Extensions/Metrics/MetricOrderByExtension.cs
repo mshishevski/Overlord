@@ -1,8 +1,6 @@
-﻿using Overlord.Application.Extensions.Metrics;
-using Overlord.Domain.Base;
+﻿using Overlord.Domain.Base;
 using Overlord.Domain.Entities;
 using Overlord.Domain.SortBy;
-
 
 namespace Overlord.Application.Extensions.Metrics
 {
