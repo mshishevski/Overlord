@@ -1,20 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Overlord.Application;
 using Overlord.Domain.Base;
 using Overlord.Domain.Entities;
-using System.Reflection;
-
 
 namespace Overlord.DataAccess
 {
     public class OverlordContext : DbContext, IOverlordContext
     {
-        public OverlordContext(DbContextOptions<OverlordContext> options): base(options)
-        { 
-
-        }
+        public OverlordContext(DbContextOptions<OverlordContext> options): base(options) { }
 
         public DbSet<Metric> Metrics => Set<Metric>();
 
@@ -54,8 +48,7 @@ namespace Overlord.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder
-                .ApplyConfigurationsFromAssembly(DataAccessAssembly.Get());
+            modelBuilder.ApplyConfigurationsFromAssembly(DataAccessAssembly.Get());
         }
     }
 }

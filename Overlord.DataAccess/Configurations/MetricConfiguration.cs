@@ -19,6 +19,5 @@ namespace Overlord.DataAccess.Configurations
                 .IsRequired()
                 .HasMaxLength(100);
         }
-
     }
 }

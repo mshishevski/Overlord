@@ -13,6 +13,5 @@ namespace Overlord.Api.Controllers
         {
             return "pong";
         }
-
     }
 }

@@ -2,9 +2,7 @@
 {
     public sealed class EmptyResult
     {
-        private EmptyResult()
-        {
-        }
+        private EmptyResult() { }
 
         public static readonly EmptyResult Default = new();
     }

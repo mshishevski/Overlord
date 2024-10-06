@@ -67,7 +67,6 @@ namespace Overlord.Application.Services
                 retain);
 
             ProcessMessage(topic, payload);
-
         }
 
         private void ProcessMessage(string topic, string payload)

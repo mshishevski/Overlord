@@ -5,7 +5,6 @@ using Overlord.Api.Requests.Metrics;
 using Overlord.Application.CommandHandlers;
 using Overlord.Application.QueryHandlers;
 
-
 namespace Overlord.Api.Controllers
 {
     [ApiController]

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Overlord.Application.Services;
 using Overlord.Application.Interfaces;
+using Overlord.Application.Services;
 using Overlord.Infrastructure.HostedServices;
 
 namespace Overlord.Infrastructure.DependencyInjection

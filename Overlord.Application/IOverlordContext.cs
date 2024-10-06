@@ -7,6 +7,5 @@ namespace Overlord.Application
     {
         DbSet<Metric> Metrics { get; }
         Task SaveChangesAsync(CancellationToken cancellationToken = default);
-
     }
 }
