@@ -8,7 +8,7 @@ namespace Overlord.Api
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
 
             builder.Logging.ClearProviders();
             builder.Logging.AddConsole();
@@ -26,9 +26,9 @@ namespace Overlord.Api
             builder.Services.AddMqttBrokerServices();
 
             var connectionString = builder.Configuration.GetConnectionString("OverlordContext");
-            builder.Services.AddOverlordServices(connectionString);
+            builder.Services.AddOverlordServices(connectionString!);
 
-            var app = builder.Build();
+            WebApplication? app = builder.Build();
 
             app.UseSwagger();
             app.UseSwaggerUI();
