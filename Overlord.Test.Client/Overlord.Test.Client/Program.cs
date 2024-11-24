@@ -37,7 +37,7 @@ namespace POC.MQTT.Client
             _mqttClient.ConnectingFailedHandler = new ConnectingFailedHandlerDelegate(OnConnectingFailed);
 
             _mqttClient.ApplicationMessageReceivedHandler = new MqttApplicationMessageReceivedHandlerDelegate(a => {
-                Log.Logger.Information("Message recieved: {payload}", a.ApplicationMessage);
+                Log.Logger.Information("Message received: {payload}", a.ApplicationMessage);
             });
 
             await _mqttClient.StartAsync(options);
