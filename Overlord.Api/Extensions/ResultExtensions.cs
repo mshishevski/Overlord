@@ -1,5 +1,4 @@
-﻿using Overlord.Application.Results;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Overlord.Domain.Results;
 
 namespace Overlord.Api.Extensions

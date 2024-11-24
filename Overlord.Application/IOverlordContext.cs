@@ -12,6 +12,5 @@ namespace Overlord.Application
         DbSet<Building> Buildings { get; }
         DbSet<MetricType> MetricTypes { get; }
         Task SaveChangesAsync(CancellationToken cancellationToken = default);
-
     }
 }
