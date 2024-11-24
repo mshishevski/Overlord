@@ -1,10 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Overlord.Application;
 using Overlord.Domain.Base;
 using Overlord.Domain.Entities;
-using System.Reflection;
 
 
 namespace Overlord.DataAccess
@@ -17,6 +15,16 @@ namespace Overlord.DataAccess
         }
 
         public DbSet<Metric> Metrics => Set<Metric>();
+
+        public DbSet<Client> Clients => Set<Client>();
+
+        public DbSet<Room> Rooms => Set<Room>();
+
+        public DbSet<Floor> Floors => Set<Floor>();
+
+        public DbSet<Building> Buildings => Set<Building>();
+
+        public DbSet<MetricType> MetricTypes => Set<MetricType>();
 
         public new async Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -41,7 +49,6 @@ namespace Overlord.DataAccess
                     {
                         baseModel.CreatedBy = "Admin";
                         baseModel.CreationTime = DateTime.Now;
-                        
                     }
                 }
             }
