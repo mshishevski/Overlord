@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Overlord.Api.Controllers
 {
@@ -6,6 +7,12 @@ namespace Overlord.Api.Controllers
     [ApiController]
     public class PingController : ControllerBase
     {
+        private readonly ISender _sender;
+        public PingController(ISender sender)
+        {
+            _sender = sender;
+        }
+
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -13,5 +20,14 @@ namespace Overlord.Api.Controllers
         {
             return "pong";
         }
+
+        [HttpGet("really")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public string Get2()
+        {
+            return "really pong";
+        }
+
     }
 }

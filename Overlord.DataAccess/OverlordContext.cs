@@ -4,13 +4,27 @@ using Overlord.Application;
 using Overlord.Domain.Base;
 using Overlord.Domain.Entities;
 
+
 namespace Overlord.DataAccess
 {
     public class OverlordContext : DbContext, IOverlordContext
     {
-        public OverlordContext(DbContextOptions<OverlordContext> options): base(options) { }
+        public OverlordContext(DbContextOptions<OverlordContext> options): base(options)
+        { 
+
+        }
 
         public DbSet<Metric> Metrics => Set<Metric>();
+
+        public DbSet<Client> Clients => Set<Client>();
+
+        public DbSet<Room> Rooms => Set<Room>();
+
+        public DbSet<Floor> Floors => Set<Floor>();
+
+        public DbSet<Building> Buildings => Set<Building>();
+
+        public DbSet<MetricType> MetricTypes => Set<MetricType>();
 
         public new async Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -35,7 +49,6 @@ namespace Overlord.DataAccess
                     {
                         baseModel.CreatedBy = "Admin";
                         baseModel.CreationTime = DateTime.Now;
-                        
                     }
                 }
             }
@@ -48,7 +61,8 @@ namespace Overlord.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(DataAccessAssembly.Get());
+            modelBuilder
+                .ApplyConfigurationsFromAssembly(DataAccessAssembly.Get());
         }
     }
 }

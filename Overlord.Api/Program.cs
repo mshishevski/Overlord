@@ -1,3 +1,4 @@
+using Overlord.Api.Extensions;
 using Overlord.Domain.Options;
 using Overlord.Infrastructure.DependencyInjection;
 
@@ -7,35 +8,28 @@ namespace Overlord.Api
     {
         public static void Main(string[] args)
         {
-            WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
-            
-            builder.Logging.ClearProviders(); 
+            var builder = WebApplication.CreateBuilder(args);
+
+            builder.Logging.ClearProviders();
             builder.Logging.AddConsole();
 
             builder.Services.Configure<MqttOptions>(builder.Configuration.GetSection(nameof(MqttOptions)));
-            builder.Services.AddControllers();
+
+            builder.Services.AddControllers(options =>
+            {
+                options.Conventions.Add(new SlugifyRouteConvention());
+            });
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddMqttBrokerServices();
 
-            string? connectionString = builder.Configuration.GetConnectionString("OverlordContext");
-
-            if (string.IsNullOrEmpty(connectionString))
-            {
-                throw new Exception("EMPTY CONNECTION STRING!");
-            }
-
+            var connectionString = builder.Configuration.GetConnectionString("OverlordContext");
             builder.Services.AddOverlordServices(connectionString);
 
-            //builder.WebHost.UseKestrel(options =>
-            //{
-            //    options.
-            //});
-
             var app = builder.Build();
-            
+
             app.UseSwagger();
             app.UseSwaggerUI();
 

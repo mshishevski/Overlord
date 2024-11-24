@@ -5,7 +5,7 @@
 $remoteUser = "shishevski"
 $remoteHost = "shishevskipi"
 $remotePath = "/home/$remoteUser/apps/Overlord"
-$localPublishPath = "C:/Repositories/Overlord/Overlord.Api/bin/Release/net6.0/linux-arm64/publish"
+$localPublishPath = "./Overlord/Overlord.Api/bin/Release/net6.0/linux-arm64/publish"
 
 
 # Function to execute remote SSH commands
