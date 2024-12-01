@@ -8,13 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="WireMockConfiguration\**" />
+    <EmbeddedResource Remove="WireMockConfiguration\**" />
+    <None Remove="WireMockConfiguration\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.36" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.36" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.36">
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.*">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
@@ -24,8 +37,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Respawn" Version="6.2.1" />
-    <PackageReference Include="WireMock.Net" Version="1.6.8" />
-    <PackageReference Include="WireMock.Net.FluentAssertions" Version="1.6.8" />
     <PackageReference Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
       <PrivateAssets>all</PrivateAssets>
@@ -38,12 +49,6 @@
     <ProjectReference Include="..\Overlord.DataAccess\Overlord.DataAccess.csproj" />
     <ProjectReference Include="..\Overlord.Infrastructure\Overlord.Infrastructure.csproj" />
     <ProjectReference Include="..\Overlord.Tests.Data\Overlord.Tests.Data.csproj" />
-  </ItemGroup>
-	
-	
-
-  <ItemGroup>
-    <Folder Include="WireMockConfiguration\" />
   </ItemGroup>
 	
 	
