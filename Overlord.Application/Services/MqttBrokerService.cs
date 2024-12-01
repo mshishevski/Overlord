@@ -31,7 +31,7 @@ namespace Overlord.Application.Services
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            await _mqttServer.StartAsync(_options.Build());
+            //await _mqttServer.StartAsync(_options.Build());
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)

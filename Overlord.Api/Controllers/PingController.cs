@@ -24,7 +24,7 @@ namespace Overlord.Api.Controllers
         [HttpGet("really")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public string Get2()
+        public string ReallyGet()
         {
             return "really pong";
         }

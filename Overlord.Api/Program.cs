@@ -15,6 +15,14 @@ namespace Overlord.Api
 
             builder.Services.Configure<MqttOptions>(builder.Configuration.GetSection(nameof(MqttOptions)));
 
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                options.ConfigureHttpsDefaults(options =>
+                {
+                    // TODO
+                });
+            });
+
             builder.Services.AddControllers(options =>
             {
                 options.Conventions.Add(new SlugifyRouteConvention());
@@ -43,4 +51,6 @@ namespace Overlord.Api
             app.Run();
         }
     }
+
+    public partial class ProgramApi { }
 }
