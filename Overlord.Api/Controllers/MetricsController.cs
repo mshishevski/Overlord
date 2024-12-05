@@ -1,5 +1,7 @@
 ﻿using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
+
 using Overlord.Api.Extensions;
 using Overlord.Api.Requests.Metrics;
 using Overlord.Application.CommandHandlers;

@@ -1,5 +1,7 @@
 ﻿using MediatR;
+
 using Microsoft.Extensions.DependencyInjection;
+
 using Overlord.IntegrationTests.Infrastructure;
 
 

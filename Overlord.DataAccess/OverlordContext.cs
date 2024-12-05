@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+
 using Overlord.Application;
 using Overlord.Domain.Base;
 using Overlord.Domain.Entities;
@@ -9,8 +10,8 @@ namespace Overlord.DataAccess
 {
     public class OverlordContext : DbContext, IOverlordContext
     {
-        public OverlordContext(DbContextOptions<OverlordContext> options): base(options)
-        { 
+        public OverlordContext(DbContextOptions<OverlordContext> options) : base(options)
+        {
 
         }
 

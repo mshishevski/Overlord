@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 using Overlord.Domain.Entities;
 
 namespace Overlord.DataAccess.Configurations

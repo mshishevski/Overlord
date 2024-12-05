@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 using Overlord.Infrastructure.DependencyInjection;
 using Overlord.IntegrationTests.Infrastructure;
 

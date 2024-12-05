@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
-using Overlord.IntegrationTests.Api.Infrastructure;
+
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Migrations.Design;
 using Microsoft.EntityFrameworkCore.SqlServer.Design.Internal;
 using Microsoft.Extensions.DependencyInjection;
+
+using Overlord.IntegrationTests.Api.Infrastructure;
 
 namespace Overlord.IntegrationTests.DataContext
 {

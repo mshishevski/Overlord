@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
+
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
 namespace Overlord.Api.Extensions
 {

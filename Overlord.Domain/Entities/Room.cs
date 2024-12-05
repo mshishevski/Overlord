@@ -9,6 +9,6 @@ namespace Overlord.Domain.Entities
         public int FloorId { get; set; }
         public ActivityStatus ActivityStatus { get; set; }
         public Floor Floor { get; set; } = null!;
-        
+
     }
 }

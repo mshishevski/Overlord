@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Overlord.IntegrationTests.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
+
 using Overlord.Api;
+using Overlord.IntegrationTests.Infrastructure;
 
 namespace Overlord.IntegrationTests.Api.Infrastructure
 {
@@ -11,7 +12,7 @@ namespace Overlord.IntegrationTests.Api.Infrastructure
     {
         public OverlordApiTestFixture(DatabaseFixture databaseFixture) : base(databaseFixture)
         {
-            
+
         }
 
 

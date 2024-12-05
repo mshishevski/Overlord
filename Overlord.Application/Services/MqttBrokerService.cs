@@ -1,10 +1,13 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System.Text;
+
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+
 using MQTTnet;
 using MQTTnet.Server;
+
 using Overlord.Application.Interfaces;
 using Overlord.Domain.Options;
-using System.Text;
 
 namespace Overlord.Application.Services
 {

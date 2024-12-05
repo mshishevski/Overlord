@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+
 using Overlord.Domain.Entities;
 
 namespace Overlord.Application

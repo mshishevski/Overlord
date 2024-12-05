@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+
 using Overlord.DataAccess;
 
 namespace Overlord.IntegrationTests.Infrastructure

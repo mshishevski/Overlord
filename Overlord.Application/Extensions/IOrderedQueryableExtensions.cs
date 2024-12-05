@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Linq.Expressions;
+
+using Microsoft.EntityFrameworkCore;
+
 using Overlord.Domain.Base;
 using Overlord.Domain.Results;
-using System.Linq.Expressions;
 
 namespace Overlord.Application.Extensions
 {

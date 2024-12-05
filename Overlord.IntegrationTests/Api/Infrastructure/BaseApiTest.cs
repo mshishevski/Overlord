@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+
 using Overlord.IntegrationTests.Infrastructure;
-using Overlord.Tests.Data;
 
 namespace Overlord.IntegrationTests.Api.Infrastructure
 {
@@ -15,6 +15,6 @@ namespace Overlord.IntegrationTests.Api.Infrastructure
             _apiTestFixture = apiTestFixture;
         }
 
-        
+
     }
 }

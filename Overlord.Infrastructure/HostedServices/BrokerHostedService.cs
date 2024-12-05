@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
+
 using Overlord.Application.Interfaces;
 
 namespace Overlord.Infrastructure.HostedServices

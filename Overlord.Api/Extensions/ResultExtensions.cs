@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+
 using Overlord.Domain.Results;
 
 namespace Overlord.Api.Extensions
